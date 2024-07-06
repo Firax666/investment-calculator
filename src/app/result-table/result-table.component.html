@@ -1,0 +1,15 @@
+<table>
+        <thead>
+            <tr>
+                <th *ngFor="let key of getKeys()" >{{ key }}</th>
+            </tr>
+        </thead>
+       
+    <tbody>
+        <tr *ngFor="let row of listToDisplay">
+            <td *ngFor="let value of getObjectValues(row)">
+                {{formatValue(value)}}   
+            </td>
+        </tr>  
+    </tbody>
+</table>
